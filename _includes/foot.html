@@ -1,0 +1,41 @@
+<script>
+  let catalog = [
+    {
+      name: '目录1',
+      children: [
+        {
+          name: '目录1-1'
+        },
+        {
+          name: '目录2-1'
+        },
+        {
+          name: '博文1-1',
+          url: ''
+        }
+      ]
+    },
+    {
+      name: '目录2',
+      children: [
+
+      ]
+    }
+  ]
+
+  let nav = document.getElementById('nav')
+
+  function a() {
+    for (let i = 0, len = catalog.length; i < len; i++) {
+      let div = document.createElement('div')
+      div.innerText = catalog[i].name
+      div.setAttribute('class', 'tree-node-div')
+      // let ul = document.createElement('ul')
+      // ul.appendChild(li)
+      // nav.appendChild(div)
+    }
+
+  }
+
+  a()
+</script>
